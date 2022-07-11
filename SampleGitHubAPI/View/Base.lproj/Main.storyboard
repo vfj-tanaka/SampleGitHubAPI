@@ -53,6 +53,11 @@
                             <constraint firstItem="KM6-Fa-dvL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ieS-Oz-TAi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Uzt-A6-g5L" id="PT3-gX-Ze8"/>
+                        <outlet property="tableView" destination="KM6-Fa-dvL" id="LHV-Mz-eC2"/>
+                        <outlet property="textField" destination="z7v-UT-KNv" id="xVg-qD-nNy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
