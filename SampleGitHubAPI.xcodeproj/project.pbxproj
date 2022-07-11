@@ -23,6 +23,8 @@
 		FCB25E3E287BBC460086F8B2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E3D287BBC460086F8B2 /* RxRelay */; };
 		FCB25E40287BBC460086F8B2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E3F287BBC460086F8B2 /* RxSwift */; };
 		FCB25E44287BBCC00086F8B2 /* RxOptional in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E43287BBCC00086F8B2 /* RxOptional */; };
+		FCB25E47287BFE040086F8B2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB25E45287BFE040086F8B2 /* TableViewCell.swift */; };
+		FCB25E48287BFE040086F8B2 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB25E46287BFE040086F8B2 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		FCB25E30287BB9FD0086F8B2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		FCB25E32287BBA120086F8B2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FCB25E37287BBA650086F8B2 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		FCB25E45287BFE040086F8B2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FCB25E46287BFE040086F8B2 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 			children = (
 				FCB25E06287BB3ED0086F8B2 /* Main.storyboard */,
 				FCB25E04287BB3ED0086F8B2 /* ViewController.swift */,
+				FCB25E46287BFE040086F8B2 /* TableViewCell.xib */,
+				FCB25E45287BFE040086F8B2 /* TableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCB25E0D287BB3F10086F8B2 /* LaunchScreen.storyboard in Resources */,
+				FCB25E48287BFE040086F8B2 /* TableViewCell.xib in Resources */,
 				FCB25E0A287BB3F10086F8B2 /* Assets.xcassets in Resources */,
 				FCB25E08287BB3ED0086F8B2 /* Main.storyboard in Resources */,
 			);
@@ -322,6 +329,7 @@
 				FCB25E05287BB3ED0086F8B2 /* ViewController.swift in Sources */,
 				FCB25E01287BB3ED0086F8B2 /* AppDelegate.swift in Sources */,
 				FCB25E31287BB9FD0086F8B2 /* ViewModel.swift in Sources */,
+				FCB25E47287BFE040086F8B2 /* TableViewCell.swift in Sources */,
 				FCB25E03287BB3ED0086F8B2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
