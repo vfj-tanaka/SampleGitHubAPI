@@ -14,7 +14,12 @@ final class ViewController: UIViewController {
     
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            let cell = UINib(nibName: "TableViewCell", bundle: nil)
+            tableView.register(cell, forCellReuseIdentifier: "Cell")
+        }
+    }
     //ViewModelの書き方のひとつで、input,outputを明確に分けた書き方
     private let viewModel = ViewModel()
     private lazy var input: viewModelInput = viewModel
@@ -53,3 +58,16 @@ final class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell else { return UITableViewCell() }
+        return cell
+    }
+}
