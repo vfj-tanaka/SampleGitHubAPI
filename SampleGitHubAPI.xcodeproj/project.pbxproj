@@ -19,6 +19,10 @@
 		FCB25E31287BB9FD0086F8B2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB25E30287BB9FD0086F8B2 /* ViewModel.swift */; };
 		FCB25E33287BBA120086F8B2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB25E32287BBA120086F8B2 /* Model.swift */; };
 		FCB25E38287BBA650086F8B2 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB25E37287BBA650086F8B2 /* GitHubAPI.swift */; };
+		FCB25E3C287BBC460086F8B2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E3B287BBC460086F8B2 /* RxCocoa */; };
+		FCB25E3E287BBC460086F8B2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E3D287BBC460086F8B2 /* RxRelay */; };
+		FCB25E40287BBC460086F8B2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E3F287BBC460086F8B2 /* RxSwift */; };
+		FCB25E44287BBCC00086F8B2 /* RxOptional in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E43287BBCC00086F8B2 /* RxOptional */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB25E40287BBC460086F8B2 /* RxSwift in Frameworks */,
+				FCB25E3E287BBC460086F8B2 /* RxRelay in Frameworks */,
+				FCB25E44287BBCC00086F8B2 /* RxOptional in Frameworks */,
+				FCB25E3C287BBC460086F8B2 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +192,12 @@
 			dependencies = (
 			);
 			name = SampleGitHubAPI;
+			packageProductDependencies = (
+				FCB25E3B287BBC460086F8B2 /* RxCocoa */,
+				FCB25E3D287BBC460086F8B2 /* RxRelay */,
+				FCB25E3F287BBC460086F8B2 /* RxSwift */,
+				FCB25E43287BBCC00086F8B2 /* RxOptional */,
+			);
 			productName = SampleGitHubAPI;
 			productReference = FCB25DFD287BB3ED0086F8B2 /* SampleGitHubAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +270,10 @@
 				Base,
 			);
 			mainGroup = FCB25DF4287BB3ED0086F8B2;
+			packageReferences = (
+				FCB25E3A287BBC460086F8B2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FCB25E42287BBCC00086F8B2 /* XCRemoteSwiftPackageReference "RxOptional" */,
+			);
 			productRefGroup = FCB25DFE287BB3ED0086F8B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -640,6 +658,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FCB25E3A287BBC460086F8B2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+		FCB25E42287BBCC00086F8B2 /* XCRemoteSwiftPackageReference "RxOptional" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxOptional";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FCB25E3B287BBC460086F8B2 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCB25E3A287BBC460086F8B2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FCB25E3D287BBC460086F8B2 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCB25E3A287BBC460086F8B2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		FCB25E3F287BBC460086F8B2 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCB25E3A287BBC460086F8B2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		FCB25E43287BBCC00086F8B2 /* RxOptional */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCB25E42287BBCC00086F8B2 /* XCRemoteSwiftPackageReference "RxOptional" */;
+			productName = RxOptional;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCB25DF5287BB3ED0086F8B2 /* Project object */;
 }
