@@ -6,14 +6,22 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxOptional
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    
+    @IBOutlet private weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
-
+    
+    
 }
 
