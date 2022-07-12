@@ -25,6 +25,7 @@
 		FCB25E44287BBCC00086F8B2 /* RxOptional in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E43287BBCC00086F8B2 /* RxOptional */; };
 		FCB25E47287BFE040086F8B2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB25E45287BFE040086F8B2 /* TableViewCell.swift */; };
 		FCB25E48287BFE040086F8B2 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB25E46287BFE040086F8B2 /* TableViewCell.xib */; };
+		FCB25E4B287D02E40086F8B2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FCB25E4A287D02E40086F8B2 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB25E4B287D02E40086F8B2 /* Alamofire in Frameworks */,
 				FCB25E40287BBC460086F8B2 /* RxSwift in Frameworks */,
 				FCB25E3E287BBC460086F8B2 /* RxRelay in Frameworks */,
 				FCB25E44287BBCC00086F8B2 /* RxOptional in Frameworks */,
@@ -203,6 +205,7 @@
 				FCB25E3D287BBC460086F8B2 /* RxRelay */,
 				FCB25E3F287BBC460086F8B2 /* RxSwift */,
 				FCB25E43287BBCC00086F8B2 /* RxOptional */,
+				FCB25E4A287D02E40086F8B2 /* Alamofire */,
 			);
 			productName = SampleGitHubAPI;
 			productReference = FCB25DFD287BB3ED0086F8B2 /* SampleGitHubAPI.app */;
@@ -279,6 +282,7 @@
 			packageReferences = (
 				FCB25E3A287BBC460086F8B2 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				FCB25E42287BBCC00086F8B2 /* XCRemoteSwiftPackageReference "RxOptional" */,
+				FCB25E49287D02E40086F8B2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = FCB25DFE287BB3ED0086F8B2 /* Products */;
 			projectDirPath = "";
@@ -684,6 +688,14 @@
 				minimumVersion = 5.0.5;
 			};
 		};
+		FCB25E49287D02E40086F8B2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -706,6 +718,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FCB25E42287BBCC00086F8B2 /* XCRemoteSwiftPackageReference "RxOptional" */;
 			productName = RxOptional;
+		};
+		FCB25E4A287D02E40086F8B2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCB25E49287D02E40086F8B2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
