@@ -18,6 +18,7 @@ final class ViewController: UIViewController {
         didSet {
             let cell = UINib(nibName: "TableViewCell", bundle: nil)
             tableView.register(cell, forCellReuseIdentifier: "Cell")
+            tableView.dataSource = self
         }
     }
     //ViewModelの書き方のひとつで、input,outputを明確に分けた書き方
@@ -54,7 +55,10 @@ final class ViewController: UIViewController {
     }
     // viewModelからくるストリーム
     private func bindOutputStream() {
-        
+        // outputの「modelsに変化があったよ」というストリームが流れてきたらテーブルを更新
+        output.changeModelsObservable.bind(to: Binder(self) {(vc, _) in
+            vc.tableView.reloadData()
+        }).disposed(by: disposeBag)
     }
 }
 
@@ -62,12 +66,14 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return output.models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let model = output.models[indexPath.item]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell else { return UITableViewCell() }
+        cell.configure(model: model)
         return cell
     }
 }

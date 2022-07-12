@@ -18,5 +18,7 @@ final class TableViewCell: UITableViewCell {
     
     func configure(model: Model) {
         
+        titleLabel.text = model.name
+        urlLabel.text = model.urlStr
     }
 }
